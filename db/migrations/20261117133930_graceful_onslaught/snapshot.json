@@ -1,0 +1,47 @@
+{
+  "type": "diff",
+  "version": "9",
+  "dialect": "postgres",
+  "id": "0313e089-b566-4b61-906c-0e97ebb06371",
+  "prevIds": [
+    "2fd8d8ba-8e79-4fb2-bc29-312230a39718"
+  ],
+  "footprints": [
+    {
+      "statementType": "add_unique",
+      "statementTarget": [
+        "table",
+        "public",
+        "user_subscriptions"
+      ],
+      "writes": [
+        "s|uq|public.user_subscriptions.user_subscriptions_clerk_user_id_key",
+        "n|uq|public.user_subscriptions.user_subscriptions_clerk_user_id_key",
+        "e|uq|public.user_subscriptions.user_subscriptions_clerk_user_id_key",
+        "n|con|public.user_subscriptions.user_subscriptions_clerk_user_id_key",
+        "n|rel|public.user_subscriptions_clerk_user_id_key"
+      ],
+      "reads": [
+        "n|tbl|public.user_subscriptions",
+        "n|sch|public",
+        "n|col|public.user_subscriptions.clerk_user_id"
+      ]
+    }
+  ],
+  "deltas": [
+    {
+      "op": "create",
+      "row": {
+        "schema": "public",
+        "table": "user_subscriptions",
+        "name": "user_subscriptions_clerk_user_id_key",
+        "nameExplicit": false,
+        "columns": [
+          "clerk_user_id"
+        ],
+        "nullsNotDistinct": false,
+        "entityType": "uniques"
+      }
+    }
+  ]
+}
