@@ -1,0 +1,1 @@
+ALTER TABLE "user_subscriptions" ADD CONSTRAINT "user_subscriptions_clerk_user_id_key" UNIQUE("clerk_user_id");

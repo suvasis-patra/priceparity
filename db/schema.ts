@@ -111,7 +111,7 @@ export const countryGroupDiscounts = pgTable(
 
 export const userSubscriptions = pgTable("user_subscriptions", {
   id: uuid("id").primaryKey().defaultRandom(),
-  clerkUserId: text("clerk_user_id").notNull(),
+  clerkUserId: text("clerk_user_id").notNull().unique(),
   stripeSubscriptionItemId: text("stripe_subscription_item_id"),
   stripeSubscriptionId: text("stripe_subscription_id"),
   stripeCustomerId: text("stripe_customer_id"),
